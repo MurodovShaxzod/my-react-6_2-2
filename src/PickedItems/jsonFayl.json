@@ -1,0 +1,76 @@
+{
+  "shoes": [
+    {
+      "picture": "shoe1.jpg",
+      "name": "Nike Air Max",
+      "information": "Running shoes with advanced cushioning technology",
+      "price": 150
+    },
+    {
+      "picture": "shoe2.jpg",
+      "name": "Adidas Ultraboost",
+      "information": "Lightweight and responsive shoes for everyday wear",
+      "price": 180
+    },
+    {
+      "picture": "shoe3.jpg",
+      "name": "Puma Suede Classic",
+      "information": "Classic sneakers with a retro design",
+      "price": 90
+    },
+    {
+      "picture": "shoe4.jpg",
+      "name": "New Balance 574",
+      "information": "Comfortable and stylish sneakers for all-day wear",
+      "price": 120
+    },
+    {
+      "picture": "shoe5.jpg",
+      "name": "Reebok Nano X",
+      "information": "Cross-training shoes with excellent stability and support",
+      "price": 140
+    },
+    {
+      "picture": "shoe6.jpg",
+      "name": "Vans Old Skool",
+      "information": "Iconic skate shoes with a timeless design",
+      "price": 80
+    },
+    {
+      "picture": "shoe7.jpg",
+      "name": "Converse Chuck Taylor All Star",
+      "information": "Classic canvas sneakers suitable for any occasion",
+      "price": 70
+    },
+    {
+      "picture": "shoe8.jpg",
+      "name": "Under Armour HOVR Phantom 2",
+      "information": "Running shoes with energy return and cushioning",
+      "price": 160
+    },
+    {
+      "picture": "shoe9.jpg",
+      "name": "Salomon Speedcross 5",
+      "information": "Trail running shoes with excellent grip and durability",
+      "price": 130
+    },
+    {
+      "picture": "shoe10.jpg",
+      "name": "Brooks Ghost 13",
+      "information": "Neutral running shoes with a smooth ride and plush cushioning",
+      "price": 140
+    },
+    {
+      "picture": "shoe11.jpg",
+      "name": "Mizuno Wave Rider 24",
+      "information": "Versatile running shoes with a comfortable fit",
+      "price": 130
+    },
+    {
+      "picture": "shoe12.jpg",
+      "name": "ASICS Gel-Kayano 27",
+      "information": "Stability running shoes with excellent support",
+      "price": 160
+    }
+  ]
+}
