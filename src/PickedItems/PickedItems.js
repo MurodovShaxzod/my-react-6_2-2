@@ -1,24 +1,19 @@
 import React from "react";
-// import JsonFayl from "./JsonFayl.json";
+import JsonFayl from "./jsonFayl.json";
 class PickedItems extends React.Component {
 
   state = {
-    user: []
+    data: JsonFayl.shoes
   }
 
   componentDidMount() {
-    fetch("jsonFayl.json")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      this.setState({user: data})
+    this.setState({
+      data: JsonFayl.shoes
     })
-    .catch((error) => {
-      console.log("Error:", error);
-    });
   }
 
   render() {
+    let data = this.state.data;
     return(
       <div className="container">
         <span className="bg-span"></span>
@@ -26,7 +21,25 @@ class PickedItems extends React.Component {
           <img src="https://logos-download.com/wp-content/uploads/2016/03/Nike_logo_emblem_logotype.png" alt="img"/>
           <h1 className="header-title">Picked items</h1>
         </header>
-
+        <main>
+          {
+           data.map((item, index) => (
+            <div key={index} className="card-picked">
+              <div className="card-picked-img">
+                <img src={item.picture} alt="img" />
+              </div>
+              <div className="card-picked-title">
+                <h2>{item.name}</h2>
+                <p>{item.information}</p>
+              </div>
+              <div className="card-picked-price">
+                <span>${item.price}</span>
+                <button id="add-to-card">ADD TO CARD</button>
+              </div>
+            </div> 
+           ))
+          }
+        </main>
       </div>
     )
   }

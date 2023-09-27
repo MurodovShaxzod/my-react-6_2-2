@@ -33,7 +33,7 @@
   border-radius: 50%;
   width: 250px;
   height: 250px;
-  background-color: rgb(243, 207, 1);
+  background-color: #f3cf01;
 }
 
 header {
@@ -56,4 +56,55 @@ header img {
 header p {
   margin: 6px 0;
   font-size: 14px;
+}
+
+.card-picked {
+  margin: 25px 10px;
+  z-index: 10;
+}
+
+.card-picked-img {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.card-picked-img img {
+  width: 100%;
+  height: 100%;
+  z-index: 10px;
+  background-color: rgb(163, 163, 163);
+  border-radius: 30px;
+}
+
+.card-picked-title h2 {
+  font-size: 26px;
+}
+
+.card-picked-title p {
+  font-size: 14px;
+}
+
+.card-picked-price {
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-picked-price span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card-picked-price button {
+  background-color: #f3cf01; 
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 16px 18px;
+  cursor: pointer; 
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
