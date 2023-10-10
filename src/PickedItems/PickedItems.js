@@ -1,19 +1,22 @@
 import React from "react";
 import JsonFayl from "./jsonFayl.json";
+import YourCard from "../YourCard/YourCard";
+
 class PickedItems extends React.Component {
 
   state = {
-    data: JsonFayl.shoes
+    data: <YourCard />
   }
 
-  componentDidMount() {
-    this.setState({
-      data: JsonFayl.shoes
-    })
+  stateFunc() {
+    this.setState(state => ({
+      data: <YourCard price="hello" />
+    }))
   }
+
 
   render() {
-    let data = this.state.data;
+    let data = JsonFayl.shoes;
     return(
       <div className="container">
         <span className="bg-span"></span>
@@ -34,7 +37,7 @@ class PickedItems extends React.Component {
               </div>
               <div className="card-picked-price">
                 <span>${item.price}</span>
-                <button id="add-to-card">ADD TO CARD</button>
+                <button id="add-to-card" onClick={this.stateFunc.bind(this)}>ADD TO CARD</button>
               </div>
             </div> 
            ))
