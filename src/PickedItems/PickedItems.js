@@ -1,22 +1,24 @@
 import React from "react";
-import JsonFayl from "./jsonFayl.json";
-import YourCard from "../YourCard/YourCard";
+import PickedListItems from "../PickedListItem/PickedListItem";
 
 class PickedItems extends React.Component {
+  // constructor(props) {
+  //   super(props)
+  // }
 
-  state = {
-    data: <YourCard />
-  }
+  // state = {
+  //   data: <YourCard />
+  // }
 
-  stateFunc() {
-    this.setState(state => ({
-      data: <YourCard price="hello" />
-    }))
-  }
+  // stateFunc() {
+  //   this.setState(state => ({
+  //     data: <YourCard price="hello" />
+  //   }))
+  // }
 
 
   render() {
-    let data = JsonFayl.shoes;
+    let {data} = this.props
     return(
       <div className="container">
         <span className="bg-span"></span>
@@ -25,23 +27,14 @@ class PickedItems extends React.Component {
           <h1 className="header-title">Picked items</h1>
         </header>
         <main>
-          {
-           data.map((item, index) => (
-            <div key={index} className="card-picked">
-              <div className="card-picked-img">
-                <img src={item.picture} alt="img" />
-              </div>
-              <div className="card-picked-title">
-                <h2>{item.name}</h2>
-                <p>{item.information}</p>
-              </div>
-              <div className="card-picked-price">
-                <span>${item.price}</span>
-                <button id="add-to-card" onClick={this.stateFunc.bind(this)}>ADD TO CARD</button>
-              </div>
-            </div> 
-           ))
-          }
+          <ul>{data.map(item => (
+            <PickedListItems 
+            key={item.id} 
+            picture={item.picture} 
+            name={item.name} 
+            information={item.information} 
+            price={item.price} />
+          ))}</ul>
         </main>
       </div>
     )
