@@ -1,7 +1,6 @@
 import React from "react";
-import PickedListItems from "../PickedListItem/PickedListItem";
 
-class PickedItems extends React.Component {
+function PickedItems(props) {
   // constructor(props) {
   //   super(props)
   // }
@@ -16,9 +15,7 @@ class PickedItems extends React.Component {
   //   }))
   // }
 
-
-  render() {
-    let {data} = this.props
+    let {data} = props
     return(
       <div className="container">
         <span className="bg-span"></span>
@@ -28,17 +25,25 @@ class PickedItems extends React.Component {
         </header>
         <main>
           <ul>{data.map(item => (
-            <PickedListItems 
-            key={item.id} 
-            picture={item.picture} 
-            name={item.name} 
-            information={item.information} 
-            price={item.price} />
+                  <li key={item.id}>
+                    <div className="card-picked">
+                      <div className="card-picked-img">
+                        <img src={item.picture} alt="img" />
+                      </div>
+                      <div className="card-picked-title">
+                        <h2>{item.name}</h2>
+                        <p>{item.information}</p>
+                      </div>
+                      <div className="card-picked-price">
+                        <span>${item.price}</span>
+                        <button id="add-to-card">ADD TO CARD</button>
+                      </div>
+                    </div>
+              </li>
           ))}</ul>
         </main>
       </div>
     )
-  }
 }
 
 export default PickedItems

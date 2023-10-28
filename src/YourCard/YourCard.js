@@ -1,9 +1,7 @@
 import React from "react";
-import YourCardItems from "../YourCardItems/YourCardItems";
 
-class YourCard extends React.Component {
-render() {
-  let data = this.props.data
+function YourCard() {
+  // let data = this.props.data
   return(
     <div className="container">
       <span className="bg-span"></span>
@@ -13,20 +11,11 @@ render() {
         <p>Your card is empty.</p>
       </header>
       <main>
-        <ul> 
-          {data.map(item => (
-            <YourCardItems 
-            key={item.id} 
-            picture={item.picture} 
-            name={item.name} 
-            information={item.information} 
-            price={item.price} />
-          ))}
+        <ul>
         </ul>
         </main>
     </div>
   )
-}
 }
 
 
