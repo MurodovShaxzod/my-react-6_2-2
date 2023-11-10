@@ -176,6 +176,10 @@ header p {
   font-weight: 700;
 }
 
+.bxs-check-circle { 
+  color: rgb(163, 163, 163);
+}
+
 @keyframes anime {
   0% {
     transform: translate(100px);

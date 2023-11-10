@@ -1,7 +1,7 @@
 import React from "react";
 
 function PickedItems(props) {
-  let { data, clickedItem, btn } = props;
+  let { data, clickedItem } = props;
   return (
     <div className="container">
       <span className="bg-span"></span>
@@ -31,7 +31,7 @@ function PickedItems(props) {
                     onClick={() => clickedItem(item.id)}
                     disabled={item.purchased ? true : false}
                   >
-                    {btn}
+                    {item.btn}
                   </button>
                 </div>
               </div>
