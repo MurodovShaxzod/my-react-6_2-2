@@ -31,15 +31,20 @@ function App() {
       }
       return data;
     });
+
     const upData = decreaseData.map((item) => {
       if (item.quantity > 0) {
         return {
           ...item,
           purchased: false,
+          btn: "ADD TO CARD",
         };
       }
       return item;
     });
+    
+    
+
     const updatedData = upData.filter((item) => item.quantity > 0);
 
     setNewInfo(updatedData);
@@ -53,13 +58,13 @@ function App() {
           {
             ...item,
             purchased: true,
-            btn: <i class='bx bx-check' ></i>
+            btn: <i className='bx bx-check' ></i>
           },
         ]);
         return {
           ...item,
           purchased: true,
-          btn: <i class='bx bx-check' ></i>
+          btn: <i className='bx bx-check' ></i>
         };
       }
       return item;
